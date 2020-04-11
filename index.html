@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuildforSDG</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav id="idea" class="navbar navbar-expand-lg fixed-top scrolled">
+        <div class="container">
+                <a class="navbar-brand m-auto">BuildforSDG</a>
+        </div> 
+    </nav>
+
+    <section>
+      <div id="row"style="padding: 6%;">
+        <div>
+            <div class="container">
+                <form>
+                    <h1 class="text-center">COVID-19 Infections Estimator</h1>
+                    <h4>Fill in the required information below to get your impact estimation</h4>
+                    <h3>Region Information</h3>
+                        <div class="form-group">
+                            <label for="Name" >Name</label>
+                            <input type="text" class="form-control" data-region-name required placeholder="West-Africa"/>    
+                        </div>
+                        <div class="form-group">
+                            <label for="Name" >Average Age</label>
+                            <input type="number" class="form-control" data-avg-age required placeholder="19"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="Name">Average Daily Income</label>
+                            <input type="number" class="form-control" data-avg-daily-income-in-usd required placeholder="in USD - 3"/>
+                        </div>
+                        <div class="form-group"> 
+                            <label for="Name" class="labels" >Average Daily Income Population</label>
+                            <input type="number" class="form-control" data-avg-daily-income-population required placeholder="In % - 60"/>
+                        </div>
+                      
+                    <hr>
+
+                    <h3>Data</h3>
+                        <div class="form-group">
+                            <label for="Name">Population</label>
+                            <input type="number" class="form-control" data-population required placeholder="67890393726"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="Name">Reported Cases</label>
+                            <input type="number" class="form-control" data-reported-cases required placeholder="333783"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="Name">Total Hospital Beds</label>
+                            <input type="number" class="form-control" data-total-hospital-beds required placeholder="87462"/>
+                        </div>
+
+                    <hr>
+        
+                    <h3>Time</h3>
+                        <div class="form-group">
+                            <label for="Name">Period Type</label>
+                            <select class="custom-select form-control" data-period-type>
+                                <option value="days">Days</option>
+                                <option value="weeks">Weeks</option>
+                                <option value="months">Months</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="Name">Time Elapsed</label>
+                            <input type="number" class="form-control" data-time-to-elapse required placeholder="12"/>
+                        </div>
+                   
+                    <hr>
+
+                    <button id="click" class=" btn btn-block btn-secondary" data-go-estimate>Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <div>
+            <h1 id = "tag"class = 'text-center pt-5'></h1>
+                <div id="estimate"></div>
+      </div> 
+    </div>
+    </section>
+
+    <!-- Boostrap CDN -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script src="./index.js"></script>
+    
+    <!-- Nav on scroll color change  -->
+    <script>
+        $(function () {
+            $(document).scroll(function() {
+                const $nav= $("#idea");
+                $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+            });
+        });
+    </script>
+</body>
+</html>
