@@ -36,8 +36,8 @@ form.addEventListener('submit', async (e) => {
   });
 
   const finalResponse = await response.json();
-  const impactData = finalResponse.estimate.impact;
-  const severeImpactData = finalResponse.estimate.severeImpact;
+  const impactData = finalResponse.impact;
+  const severeImpactData = finalResponse.severeImpact;
 
   const values = [
     {
@@ -63,10 +63,10 @@ form.addEventListener('submit', async (e) => {
   ];
 
   const resultCard = (data) => (
-    `<div class="card mb-3 cards">
+    `<div class="card">
         <div class="card-body">
-          <h5 class="card-title pt-3 text-center">${data.title}</h5>
-            <ul class="list-group list-group-flush">
+          <h5 class="card-title">${data.title}</h5>
+            <ul class="list-group">
               <li class="list-group-item">Currently Infected <br> <span id="" >${data.currentlyInfected}</span></li>
               <li class="list-group-item">Infections By Requested Time <br> <span id="two" >${data.infectionsByRequestedTime}</span></li>
               <li class="list-group-item">Severe Cases At Requested Time<br> <span id="three" >${data.severeCasesByRequestedTime}</span></li>

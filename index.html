@@ -3,24 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This allows you to input several data to get the estimate of the COVID-19 Infections">
     
     <title>BuildforSDG</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen,print" >
 </head>
 <body>
-    <nav id="idea" class="navbar navbar-expand-lg fixed-top scrolled">
+    <header id="idea" class="header">
         <div class="container">
-                <a class="navbar-brand m-auto">BuildforSDG</a>
-        </div> 
-    </nav>
+            <h4 class="center">
+                BuildforSDG
+            </h4>           
+        </div>
+    </header>
 
     <section>
-      <div id="row"style="padding: 6%;">
+      <div id="row">
         <div>
-            <div class="container">
-                <h1 class="text-center pt-5 pt-md-2">COVID-19 Infections Estimator</h1>
-                <h5>Fill in the required information below to get your impact estimation</h5>
+            <h1 class="center">COVID-19 Infections Estimator</h1>
+                <h4>Fill in the required information below to get your impact estimation</h4>
                 <form>
                     <h3>Region Information</h3>
                         <div class="form-group">
@@ -74,34 +75,18 @@
                    
                     <hr>
 
-                    <button id="click" class=" btn btn-block btn-secondary" data-go-estimate>Submit</button>
+                    <button id="click" class="button" data-go-estimate>Submit</button>
                 </form>
             </div>
-        </div>
 
         <div>
-            <h1 id = "tag"class = 'text-center pt-5'></h1>
+            <h1 id = "tag"></h1>
                 <div id="estimate"></div>
-      </div> 
-    </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Boostrap CDN -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
-    <script src="./index.js"></script>
-    
-    <!-- Nav on scroll color change  -->
-    <script>
-        $(function () {
-            $(document).scroll(function() {
-                const $nav= $("#idea");
-                $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
-            });
-        });
-    </script>
+    <script async src="./index.js"></script>
+
 </body>
 </html>

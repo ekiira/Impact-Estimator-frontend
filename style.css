@@ -1,7 +1,26 @@
-.navbar.scrolled{
-    background-color:black;
+body {
+    margin: 0;
+    font-size: 20px;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+header {
+    background: black;
     color: white;
-    transition:background 500ms;
+    margin: 0;
+}
+
+header h4 {
+    margin: 0;
+    font-size: 1.5rem;
+    padding: 2% 0;
+}
+
+.center {
+    text-align: center;
 }
 
 section {
@@ -13,50 +32,132 @@ section {
     box-shadow: 6px 9px 22px 3px rgba(176,170,132,0.5);
 } 
 
+#row {
+    width: 80%;
+    margin: 0 auto;
+    padding: 4%;
+}
+
 h3 {
     text-align: center;
     margin-top: 30px;
 }
 
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+}
+
 .form-control {
-    /* border: none; */
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     border: 1px solid black;
 }
 
-.btn-block{
-    background: black;
-    border-color: black;
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
 }
 
-.btn-block:hover {
+.button {
+    background: black;
+    border-color: black;
+    color: white;
+    width: 100%;
+    padding: 2.5%;
+    border-radius: 1.5rem;
+}
+
+.button:hover {
     background: white;
     color: black;
     border: 1px solid black;
 }
 
-.btn-secondary.focus, .btn-secondary:focus {
+.button.focus, .button:focus {
     color: #fff;
     background-color: black;
     border-color: black;
+    outline: none;
 }
 
-.btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show>.btn-secondary.dropdown-toggle {
+.button:not(:disabled):not(.disabled).active, .button:not(:disabled):not(.disabled):active, .show>.button.dropdown-toggle {
     color: black;
     background-color:white;
     border-color: black;
 }
 
-.cards {
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border-radius: .25rem;
     border: black 2px solid;
     color: black;
     height: 100%;
+    margin: 16px 0;
+}
+
+ul {
+    display: block;
+    margin-bottom: 0;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px
 }
 
 .list-group-item {
+    position: relative;
+    display: block;
+    padding: .75rem 1.25rem;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+    text-align: center;
+    border-right-width: 0;
+    border-left-width: 0;
+    border-radius: 0;
+}
+
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem;
+}
+
+.card-title {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+#tag {
+    padding-top: 8%;
     text-align: center;
 }
-#row {
-    width: 80%;
-    margin: 0 auto;
-}
+
 
